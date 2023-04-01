@@ -1,6 +1,9 @@
 public class Vehicle {
 
     public Vehicle(int InitialAltitude) {
+        Altitude = InitialAltitude;
+        PrevAltitude = InitialAltitude;
+
         // initialize the altitude AND previous altitude to initialAltitude
     }
 
@@ -91,7 +94,7 @@ public class Vehicle {
 
     public DescentEvent getStatus(int tick) {
 
-        DescentEvent descent = new DescentEvent(tick, Velocity, Fuel, Altitude, FLYING);
+        DescentEvent descent = new DescentEvent(tick, Velocity, Fuel, Altitude, Flying);
 
         // create a return a new DescentEvent object
         // filled in with the state of the vehicle.
